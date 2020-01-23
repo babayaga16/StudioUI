@@ -1,0 +1,91 @@
+$color1 : #273746 ;
+$headingfont : #58D68D ;
+$h1size : 30px ;
+@import "mixins" ;
+@import "reset" ;
+
+#main-nav {
+    background-color: $color1;
+
+    ul {
+        @include clearfix ;
+        width: 100%;
+    }
+    li {
+        float: left;
+        width: 14%;
+        height: auto;
+    }
+    a {
+        color: $headingfont;
+        text-decoration: none;
+        padding: 14px;
+        display: block;
+        text-align: center;
+        font-size: 23px;
+        
+        
+       
+    }
+
+}
+
+section h1 {
+    color: $headingfont;
+    font-size: $h1size;
+}
+
+.lead-banner {
+    @include banner ;
+    text-align: right;
+}
+
+.lessons-banner {
+    @include banner ;
+    ul {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        color:burlywood;
+        max-width: 500px;
+        font-size: 20px ;
+    }
+}
+
+#services{
+    margin-bottom: 60px;
+    li {
+        float: left;
+        width: (100%/3);
+        box-sizing: border-box;
+        text-align: center;
+
+    }
+    img {
+        width: 60% ;
+       margin: 20px 20% ;
+        
+    }
+    a {
+        text-decoration: none;
+       color: rgb(122, 49, 16);
+       font-weight: bold;
+       &:hover{
+           color: coral;
+       }
+    }
+    ul {
+       
+        @include clearfix ;
+    }
+    
+}
+
+#projects {
+    li {
+        @include grid(4 , 2%) 
+
+    }
+    img {
+        width: 100%;
+    }
+}
